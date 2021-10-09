@@ -1,11 +1,17 @@
 class contacts constructor(var contactID: Int = 999,
-                           var firstName: String,
+                           firstName: String,
                            var lastName: String,
                            var emailAddress: String,
                            var phoneHome: String,
                            var phoneWork: String,
                            var phoneCell: String,
                            ){
+    var firstName: String = firstName
+        get() = field
+        set(value) {
+            field = value
+
+    }
     init{
         println("New contact added: $firstName $lastName")
     }

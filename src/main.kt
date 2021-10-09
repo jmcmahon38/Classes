@@ -1,16 +1,18 @@
 fun main() {
 // testing creating new objects from Employee class
     val employee1 = Employee(
-        1, "James","McJameson", 1
+        1, "James","McJameson", null
     )
 
     val employee2 = Employee(
-        2, "Garth","McGartherstein", 3
+        2, "Garth","McGartherstein", null
     )
 
     val employee3 = Employee(
-        3, "Unga","McGungalo", 2
+        3, "Unga","McGungalo", null
     )
+    employee3.empShift = 3
+
     // checking method functionality
     println("*****")
     employee1.printValues()
@@ -18,7 +20,9 @@ fun main() {
     employee2.printValues()
     println("*****")
     employee3.printValues()
+    println("*****")
 
+    println("Emp shift: ${employee1.empShift}")
 }
 
 // notes

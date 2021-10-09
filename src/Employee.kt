@@ -1,9 +1,27 @@
 // class used to add new employees to the HR db
-class Employee constructor(
-    val empNum: Int = 1,
-    var empFirstName: String,
-    var empLastName: String,
-    var empShift: Int? = 1){
+class Employee (
+                val empNum: Int,
+                empFirstName: String,
+                empLastName: String,
+                empShift: Int?) {
+    var empFirstName: String = empFirstName
+        get() = field
+        set(value){
+            field  = value
+        }
+    var empLastName: String = empLastName
+        get() = field
+        set(value){
+            field  = value
+            }
+
+    //why do I have issues setting/getting an Int?
+    var empShift: Int? = empShift
+        get() = field
+        set(value){
+            field  = value
+        }
+
 
     // initialize and give user entry validation
     init {
@@ -20,4 +38,5 @@ class Employee constructor(
     }
 
 }
+
 
